@@ -1,0 +1,1 @@
+"""Wigan crime analysis pipeline."""

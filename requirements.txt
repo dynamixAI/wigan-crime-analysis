@@ -1,0 +1,10 @@
+# Exact versions used for the October 2026 report.
+# Holt-Winters fits use numerical optimisation, so other versions (or other machines)
+# can occasionally give slightly different numbers.
+matplotlib==3.11.2
+numpy==2.5.4
+openpyxl==3.1.5
+pandas==3.0.6
+requests==2.34.2
+scipy==1.18.1
+statsmodels==0.15.0
