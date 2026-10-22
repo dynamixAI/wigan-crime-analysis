@@ -1,0 +1,268 @@
+{
+  "issued": "2026-10-22",
+  "target": "Greater Manchester Police recorded crime per quarter, all boroughs incl. unassigned, excl. Manchester Airport and fraud",
+  "training_quarters": [
+    "2021/22 Q1",
+    "2026/27 Q1",
+    21
+  ],
+  "training_values": [
+    87148,
+    89522,
+    89058,
+    85088,
+    94713,
+    95409,
+    89824,
+    90112,
+    92357,
+    86377,
+    83081,
+    78471,
+    83438,
+    81375,
+    78207,
+    73999,
+    81321,
+    79839,
+    75758,
+    73517,
+    81001
+  ],
+  "ensemble": {
+    "parts": [
+      "HW damped, mult season",
+      "HW no trend, mult season"
+    ],
+    "weight_damped": 0.55
+  },
+  "models": {
+    "HW damped, mult season": {
+      "design": {
+        "trend": "add",
+        "damped_trend": true,
+        "seasonal": "mul"
+      },
+      "params": {
+        "smoothing_level": 1.0,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.97959,
+        "initial_level": 93200.733339,
+        "initial_trend": -826.117363,
+        "initial_seasons": [
+          0.94268,
+          0.932525,
+          0.900086,
+          0.871736
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      }
+    },
+    "HW no trend, mult season": {
+      "design": {
+        "trend": null,
+        "damped_trend": false,
+        "seasonal": "mul"
+      },
+      "params": {
+        "smoothing_level": 1.0,
+        "smoothing_seasonal": 0.0,
+        "initial_level": 93200.733337,
+        "initial_seasons": [
+          0.935057,
+          0.924503,
+          0.892424,
+          0.864922
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      }
+    }
+  },
+  "wigan_share": 0.10195,
+  "wigan_share_by_year": {
+    "2021/22": 0.1057,
+    "2022/23": 0.1004,
+    "2023/24": 0.10343,
+    "2024/25": 0.10048
+  },
+  "wigan_population_growth": 0.01147,
+  "band_pct_by_year": [
+    3,
+    7,
+    11,
+    15,
+    19
+  ],
+  "check_next": {
+    "quarter": "2026/27 Q2",
+    "forecast_force_total": 79841
+  },
+  "test_models_2025_26": {
+    "design": "HW damped, mult season",
+    "params_by_borough": {
+      "Bolton": {
+        "smoothing_level": 0.755759,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 9444.677498,
+        "initial_trend": -94.029812,
+        "initial_seasons": [
+          0.988908,
+          0.974845,
+          0.92476,
+          0.911307
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Bury": {
+        "smoothing_level": 0.0,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 5425.885719,
+        "initial_trend": -52.47771,
+        "initial_seasons": [
+          1.050683,
+          1.030074,
+          0.988302,
+          0.973278
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Manchester": {
+        "smoothing_level": 0.862099,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 25256.425005,
+        "initial_trend": -159.915867,
+        "initial_seasons": [
+          0.900421,
+          0.881882,
+          0.878276,
+          0.839039
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Oldham": {
+        "smoothing_level": 0.682648,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 7561.933327,
+        "initial_trend": -41.538527,
+        "initial_seasons": [
+          1.010255,
+          1.020523,
+          0.960099,
+          0.932981
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Rochdale": {
+        "smoothing_level": 1.0,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.967221,
+        "initial_level": 7786.533347,
+        "initial_trend": -124.026469,
+        "initial_seasons": [
+          0.99241,
+          0.986525,
+          0.942111,
+          0.908492
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Salford": {
+        "smoothing_level": 1.0,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 8654.358506,
+        "initial_trend": -46.408281,
+        "initial_seasons": [
+          0.886965,
+          0.875977,
+          0.847798,
+          0.844867
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Stockport": {
+        "smoothing_level": 0.728389,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 6870.724979,
+        "initial_trend": -51.786526,
+        "initial_seasons": [
+          0.961884,
+          0.946404,
+          0.930299,
+          0.916275
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Tameside": {
+        "smoothing_level": 1.0,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 7180.44999,
+        "initial_trend": -101.235903,
+        "initial_seasons": [
+          0.962897,
+          0.966025,
+          0.914626,
+          0.888367
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Trafford": {
+        "smoothing_level": 0.714989,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 5206.249984,
+        "initial_trend": -53.043074,
+        "initial_seasons": [
+          0.966532,
+          0.971078,
+          0.984458,
+          0.939263
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      },
+      "Wigan": {
+        "smoothing_level": 0.781755,
+        "smoothing_trend": 0.0,
+        "smoothing_seasonal": 0.0,
+        "damping_trend": 0.995,
+        "initial_level": 9560.558325,
+        "initial_trend": -92.497184,
+        "initial_seasons": [
+          0.971687,
+          0.994288,
+          0.944676,
+          0.916643
+        ],
+        "use_boxcox": false,
+        "remove_bias": false
+      }
+    }
+  }
+}
