@@ -193,10 +193,28 @@ story.append(PageBreak())
 # =============================================================================
 # 1. Questions and approach
 # =============================================================================
-P("1. Questions and approach", "h1")
-P("People in Wigan regularly say they feel unsafe in parts of the town centre at certain times, and local "
-  "media regularly report on crime. This analysis tests whether recorded crime supports the view that "
-  "Wigan has a high crime rate, using only public data so that anyone can check it. It answers four questions:")
+P("1. Introduction", "h1")
+P("1.1 The public debate", "h2")
+P("Residents often say they feel unsafe in parts of Wigan town centre at certain times, and that view is "
+  "reflected in local coverage. A Wigan Today columnist wrote in 2023 that <i>\"Wigan is a crime hotspot. It's "
+  "unsafe.\"</i> [1] The same month, councillors raised concerns that daytime drinking and anti-social behaviour "
+  "around the bus station were deterring families from the town centre [2]. More recent incidents have kept the "
+  "issue in the news: two people were stabbed at Wigan bus station in September 2025, after which police issued "
+  "a dispersal order. Police said: <i>\"Anti-social behaviour and violence have no place in our town "
+  "centre.\"</i> [3] In May 2026, a man was injured, apparently by a knife, during a disturbance on Market "
+  "Street [4]. Police list violent crime, anti-social behaviour and the town centre night-time economy among "
+  "their 2026 priorities for central Wigan [5], and Wigan Council is consulting on renewing its town centre "
+  "public space protection orders [6].")
+P("Published figures point in different directions. In February 2026, Wigan Today reported a 5% fall in "
+  "recorded crime in the year to September 2025 [11], and GMP reported that residential burglary fell 24% and "
+  "personal robbery 21% across Wigan and Leigh in 2025, with its local inspector stating that officers were "
+  "<i>\"responding faster, solving more crimes\"</i> [10]. Three months later, Wigan Today reported a rise in "
+  "recorded crime and noted that Wigan recorded the second-highest number of crimes in Greater Manchester [9]. "
+  "Reports like these usually describe counts over short periods. This analysis uses rates per resident over "
+  "six years, and compares them fairly.")
+P("1.2 Questions and approach", "h2")
+P("This analysis tests whether recorded crime supports the view that Wigan has a high crime rate, using only "
+  "public data so that anyone can check it. It answers four questions:")
 bullets([
     "<b>Q1.</b> How does Wigan's recorded crime rate compare with its neighbours, Greater Manchester and the "
     "national average, and how is it changing?",
@@ -208,7 +226,7 @@ P("Two principles run through the method. First, <b>compare rates, not counts</b
   "per 1,000 residents, because larger places always have more crimes. Second, <b>test the conclusion, "
   "not just the data</b>: each finding was challenged with a fairer comparison, and the report shows how the "
   "answer changed at each step.")
-P("What this analysis cannot do", "h2")
+P("1.3 What this analysis cannot do", "h2")
 P("The data is borough-level and quarterly. It cannot say anything about specific streets, the town centre, or "
   "particular times of day, because GMP does not publish street-level data (section 2.1). Recorded crime also "
   "differs from crime that actually happens: it depends on what people report and how police record it. The "
@@ -223,7 +241,7 @@ P("The usual source for local crime analysis is police.uk, which publishes stree
   "API. An initial analysis used it, and produced misleading results for two reasons:")
 bullets([
     "<b>GMP stopped supplying police.uk in July 2019.</b> In a 2026 Freedom of Information response (ref. "
-    "26.016219), GMP confirmed it \"hasn't provided data to police.uk since July 2019\" and has no timeline to "
+    "26.016219) [7], GMP confirmed it \"hasn't provided data to police.uk since July 2019\" and has no timeline to "
     "resume. Querying the API for the whole Wigan boundary returned only 5–17 crimes a month, against several "
     "thousand actually recorded. Of the 381 records returned over three years, 96 were British Transport Police "
     "railway crimes.",
@@ -236,7 +254,7 @@ P("This is worth stating because anyone checking Wigan's crime on police.uk toda
 
 P("2.2 Crime data used", "h2")
 P("The analysis uses the Home Office <i>Police recorded crime Community Safety Partnership open data tables</i> "
-  "(year ending March 2021 to year ending June 2026; updated 22 October 2026). These are the same figures the "
+  "(year ending March 2021 to year ending June 2026; updated 22 October 2026) [8]. These are the same figures the "
   "ONS uses in its official <i>Crime in England and Wales</i> statistics. Every police force, including GMP, must "
   "report them to the Home Office.")
 table([
@@ -254,18 +272,18 @@ P("The release was converted from ODS to one CSV per financial year with LibreOf
 P("2.3 Definitions", "h2")
 bullets([
     "<b>Fraud is excluded.</b> Since 2011–2013, fraud has been recorded centrally by Action Fraud rather than local "
-    "police, so it is largely missing at local level and would distort borough comparisons.",
+    "police, so it is largely missing at local level and would distort borough comparisons [19].",
     "<b>Anti-social behaviour is not included.</b> It is not a notifiable crime and is not in these tables.",
     "<b>Greater Manchester</b> means the whole of GMP's recorded crime, including crimes with no borough "
     "recorded and Manchester Airport, so that it is never understated.",
 ])
 
 P("2.4 Population and deprivation", "h2")
-P("<b>Population:</b> ONS mid-year population estimates from Nomis (dataset NM_2002_1), mid-2020 to mid-2025, "
+P("<b>Population:</b> ONS mid-year population estimates from Nomis (dataset NM_2002_1) [18], mid-2020 to mid-2025, "
   "for the 10 Greater Manchester boroughs and England and Wales, and mid-2024 for all 296 English local "
   "authorities. The mid-year estimate for year N (30 June) falls inside financial year N/N+1, so mid-2024 "
   "population is used for 2024/25 crime.")
-P("<b>Deprivation:</b> English Indices of Deprivation 2025 (File 10, version 2, the corrected release). The "
+P("<b>Deprivation:</b> English Indices of Deprivation 2025 (File 10, version 2, the corrected release) [17]. The "
   "analysis uses the <b>income domain</b>, the share of residents on low incomes, not the overall Index of "
   "Multiple Deprivation. The overall index includes a <i>crime</i> domain, so using it to explain crime would be "
   "circular. The index covers England only.")
@@ -331,14 +349,19 @@ table([
 P("Wigan stays below Greater Manchester and Bolton throughout. Its rate fell 18% from the 2021/22 peak to "
   "2024/25, compared with 4% nationally, and its gap above the national rate narrowed from 21% (2022/23) to 9% "
   "(2024/25).")
+P("This is consistent with independent reports. GMP reported falls in residential burglary (24%) and personal "
+  "robbery (21%) across Wigan and Leigh in 2025 [10], and Wigan Today reported a 5% fall in recorded crime in the "
+  "year to September 2025 [11]. A later report of a small rise in the year to December 2025 [9] covers the period "
+  "when crimes began to go unassigned (section 3), so short-term movements in published borough figures from "
+  "late 2025 should be read with caution.")
 
 P("4.2 Recording practice in Greater Manchester: an important caveat", "h2")
 P("In December 2020, HM Inspectorate of Constabulary (HMICFRS) reported that GMP had failed to record an "
   "estimated <b>80,100 crimes</b> in the year to June 2020: about one in five reported crimes and one in four "
-  "violent crimes (GMP recorded 77.7% of reported crime). Under-recording was worst for violent crime, including "
+  "violent crimes (GMP recorded 77.7% of reported crime) [12]. Under-recording was worst for violent crime, including "
   "domestic abuse, harassment, stalking and coercive control. GMP was placed in special measures in December "
-  "2020 and removed in October 2022, when inspectors found it compliant with national crime recording "
-  "standards, recording about 30,500 crimes a month. A December 2023 inspection rated no area inadequate.")
+  "2020 [13] and removed in October 2022, when inspectors found it compliant with national crime recording "
+  "standards, recording about 30,500 crimes a month [14][15]. A December 2023 inspection rated no area inadequate [16].")
 callout("<b>Implication:</b> part of the rise in recorded crime across Greater Manchester between 2020/21 and "
         "2022/23, especially in violence and public order offences, is likely to reflect better recording rather "
         "than more crime. Covid-19 lockdowns also lowered crime nationally in 2020/21. Comparisons from 2022/23 "
@@ -358,6 +381,11 @@ table([
     caption="Table 4. Rank is by 2024/25 rate (1 = highest). The 2025/26 estimate shares out unassigned crimes; "
             "Wigan stays 8th.")
 
+P("Counts and rates can tell different stories. Wigan Today reported in May 2026 that Wigan recorded the "
+  "second-highest number of crimes in Greater Manchester [9]. That is correct as a count, but Wigan is also "
+  "Greater Manchester's second-largest borough, with about 347,000 residents in mid-2025 [18]. Per resident, it "
+  "has the third-lowest rate of the ten boroughs. This difference between counts and rates is a likely reason "
+  "why public perception and recorded crime rates can disagree.")
 P("4.4 Types of crime", "h2")
 chart("03_offence_types.png", "Figure 4. Wigan compared with England and Wales by offence group, 2024/25.", width=150)
 table([
@@ -458,7 +486,7 @@ bullets([
     "parameters, such as gradient-boosted trees or neural networks, would memorise so few points. Tree-based "
     "models also cannot predict values below those seen in training, which matters when crime is falling. With "
     "short seasonal series, exponential smoothing (Holt-Winters) is the standard, well-tested choice "
-    "(Hyndman and Athanasopoulos, <i>Forecasting: Principles and Practice</i>).",
+    "(Hyndman and Athanasopoulos, <i>Forecasting: Principles and Practice</i>) [20].",
     "<b>A baseline to beat.</b> Seasonal naive (each quarter equals the same quarter last year) is included so any "
     "gain from a cleverer model is measured, not assumed.",
     "<b>Time-ordered splits only.</b> A random train/test split would put future quarters into training (data "
@@ -505,14 +533,15 @@ P("The damped multiplicative design was selected (6.0% average; 6.4% for Wigan).
   "pattern) and 0.87 (damping).")
 P("Ensemble", "h2")
 P("Averaging forecasts from different models is one of the most reliable findings in forecasting research, "
-  "including the M4 competition (Makridakis et al., 2020). The damped model assumes the recent fall continues "
+  "including the M4 competition (Makridakis et al., 2020) [21]. The damped model assumes the recent fall continues "
   "and fades; the no-trend model assumes crime stays level. Weights from 0 to 1 were tested on the same "
   "cross-validation, on a fine grid (steps of 0.05) with unrounded errors.")
 table([
     ["Weight on damped model", "0.00", "0.25", "0.50", "0.55", "0.75", "1.00"],
     ["Average error (%)", "6.36", "5.84", "5.55", "5.54", "5.68", "6.02"],
 ], [52, 19, 19, 20, 20, 20, 20], caption="Table 10. The combination beats either model alone. The optimum (0.55) was "
-                                         "used; it is 0.01 points better than an equal mix.")
+                                         "used; it is 0.01 points better than an equal mix, consistent with the \"forecast combination puzzle\" that tuned "
+                                         "weights rarely beat equal ones by much [22].")
 P("On the 2024/25 back-test the single model and the ensemble tied (5.1% each), but the ensemble cut the worst "
   "borough error by a third (Trafford 18.4% to 12.4%). The single model leaned low (−0.8%) and the ensemble high "
   "(+1.6%) in a year when crime fell; the reverse was true in 2025/26 when crime levelled off. Because the "
@@ -643,27 +672,63 @@ P(f"All code is published at <font color='#2a78d6'>{REPO}</font>. One command (<
 P("Note: ONS population estimates and Home Office tables are revised over time, so rerunning later may give "
   "slightly different figures. The checksums show whether that is the cause.", "small")
 
-P("Sources", "h1")
-for s in [
-    "Home Office (2026). Police recorded crime and outcomes open data tables: Community Safety Partnership, year "
-    "ending March 2021 to year ending June 2026. gov.uk/government/statistical-data-sets/police-recorded-crime-and-outcomes-open-data-tables",
-    "Greater Manchester Police (2026). FOI 26.016219: historical street-level crime and stop and search data for "
-    "2023, 2024 and 2025. gmp.police.uk",
-    "Ministry of Housing, Communities and Local Government (2025). English Indices of Deprivation 2025, File 10 "
-    "(v2). gov.uk/government/statistics/english-indices-of-deprivation-2025",
-    "Office for National Statistics. Mid-year population estimates (Nomis dataset NM_2002_1). nomisweb.co.uk",
-    "Police Professional (10 December 2020). GMP failing to record one in five of all reported crimes. policeprofessional.com/?p=130825",
-    "Police Professional (December 2020). Greater Manchester Police to be placed in special measures.",
-    "Police Professional (28 October 2022). Greater Manchester Police removed from special measures. policeprofessional.com/?p=136785",
-    "HMICFRS. Greater Manchester Police removed from enhanced monitoring. hmicfrs.justiceinspectorates.gov.uk",
-    "ONS. User guide to crime statistics for England and Wales. ons.gov.uk",
-    "Hyndman, R.J. and Athanasopoulos, G. (2021). Forecasting: Principles and Practice, 3rd edition. OTexts. otexts.com/fpp3",
+P("References", "h1")
+REFS = [
+    "Marsden, L. (2023, 17 February). <i>Wigan isn't as safe as it used to be</i> [opinion column]. Wigan Today. "
+    "wigantoday.net/news/opinion/columnists/luke-marsden-wigan-isnt-as-safe-as-it-used-to-be-4028619",
+    "Lythgoe, G. (2023, 4 February). <i>Wigan town centre no longer \"Dodge City\" but \"undesirables\" still "
+    "causing concern</i>. Wigan Today. wigantoday.net/news/politics/council/wigan-town-centre-no-longer-dodge-city-"
+    "but-undesirables-still-causing-concern-4013159",
+    "Clarke, G. (2025, 11 September). <i>Wigan bus station stabbings: town centre dispersal order as police stamp "
+    "down on crime</i>. Wigan Today. wigantoday.net/news/crime/wigan-bus-station-stabbings-town-centre-dispersal-"
+    "order-as-police-stamp-down-on-crime-5313901",
+    "Greater Manchester Police (2026, 8 May). <i>Four arrested following disturbance in Wigan town centre</i>. "
+    "gmp.police.uk/news/greater-manchester/news/news/2026/may/four-arrested-following-disturbance-in-wigan-town-centre",
+    "Greater Manchester Police (2026). <i>Wigan Central: our priorities</i>. "
+    "gmp.police.uk/area/your-area/greater-manchester/wigan/wigan-central/on-the-team/our-priorities",
+    "Wigan Council (2026, 30 June). <i>Have your say on town centre safety plans</i>. "
+    "wigan.gov.uk/News/Articles/2026/June/Have-your-say-on-town-centre-safety-plans.aspx",
+    "Greater Manchester Police (2026). <i>FOI 26.016219: Historical street-level crime and stop and search data "
+    "for 2023, 2024 and 2025</i>. gmp.police.uk (FOI disclosure log, April 2026)",
+    "Home Office (2026). <i>Police recorded crime and outcomes open data tables: Community Safety Partnership, year "
+    "ending March 2021 to year ending June 2026</i> (updated 22 October 2026). "
+    "gov.uk/government/statistical-data-sets/police-recorded-crime-and-outcomes-open-data-tables",
+    "Lees, J. (2026, 24 May). <i>New figures show more crimes reported to police in Wigan including shoplifting "
+    "and drug offences</i>. Wigan Today. wigantoday.net/news/crime/new-figures-show-more-crimes-reported-to-police-"
+    "in-wigan-including-shoplifting-and-drug-offences-8567438",
+    "Greater Manchester Police (2026, 20 February). <i>Neighbourhood crime down and more offenders brought to "
+    "justice across Wigan district</i>. gmp.police.uk/news/greater-manchester/news/news/2026/february/"
+    "neighbourhood-crime-down-and-more-offenders-brought-to-justice-across-wigan-district",
+    "Clarke, G. (2026, 20 February). <i>New figures show fewer crimes reported and more solved by police in "
+    "Wigan</i>. Wigan Today. wigantoday.net/news/crime/new-figures-show-fewer-crimes-reported-and-more-solved-by-"
+    "police-in-wigan-5604444",
+    "Police Professional (2020, 10 December). <i>GMP failing to record one in five of all reported crimes</i>. "
+    "policeprofessional.com/?p=130825",
+    "Police Professional (2020, December). <i>Greater Manchester Police to be placed in special measures</i>. "
+    "policeprofessional.com/news/greater-manchester-police-to-be-placed-in-special-measures",
+    "Police Professional (2022, 28 October). <i>Greater Manchester Police removed from special measures</i>. "
+    "policeprofessional.com/?p=136785",
+    "HM Inspectorate of Constabulary and Fire &amp; Rescue Services. <i>Greater Manchester Police removed from "
+    "enhanced monitoring</i>. hmicfrs.justiceinspectorates.gov.uk/news/news-feed/greater-manchester-police-removed-"
+    "from-enhanced-monitoring",
+    "Guernsey Press (2023, 1 December). <i>Significant improvements by Greater Manchester Police, inspection "
+    "finds</i>. guernseypress.com/news/uk-news/2023/12/01/significant-improvements-by-greater-manchester-police-"
+    "inspection-finds",
+    "Ministry of Housing, Communities and Local Government (2025). <i>English Indices of Deprivation 2025</i>, "
+    "File 10 (v2). gov.uk/government/statistics/english-indices-of-deprivation-2025",
+    "Office for National Statistics. <i>Mid-year population estimates</i> (Nomis dataset NM_2002_1). nomisweb.co.uk",
+    "Office for National Statistics. <i>User guide to crime statistics for England and Wales</i>. ons.gov.uk",
+    "Hyndman, R.J. and Athanasopoulos, G. (2021). <i>Forecasting: Principles and Practice</i>, 3rd edition. "
+    "OTexts. otexts.com/fpp3",
     "Makridakis, S., Spiliotis, E. and Assimakopoulos, V. (2020). The M4 Competition: 100,000 time series and 61 "
-    "forecasting methods. International Journal of Forecasting, 36(1), 54–74.",
-    "Smith, J. and Wallis, K.F. (2009). A simple explanation of the forecast combination puzzle. Oxford Bulletin of "
-    "Economics and Statistics, 71(3), 331–355.",
-]:
-    story.append(Paragraph(s, S["bullet"], bulletText="•"))
+    "forecasting methods. <i>International Journal of Forecasting</i>, 36(1), 54–74.",
+    "Smith, J. and Wallis, K.F. (2009). A simple explanation of the forecast combination puzzle. <i>Oxford "
+    "Bulletin of Economics and Statistics</i>, 71(3), 331–355.",
+]
+ref_style = ParagraphStyle("ref", parent=S["bullet"], leftIndent=24, bulletIndent=0, fontSize=8.6, leading=12.4)
+for i, r in enumerate(REFS, 1):
+    story.append(Paragraph(r, ref_style, bulletText=f"[{i}]"))
+story.append(Spacer(1, 8))
 
 P("Glossary", "h2")
 table([
