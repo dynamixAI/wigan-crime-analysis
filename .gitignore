@@ -3,3 +3,6 @@ outputs/
 models/*.pkl
 __pycache__/
 .venv/
+
+# LinkedIn drafts (kept local only)
+reports/linkedin_article*.md
